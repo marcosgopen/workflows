@@ -1,19 +1,19 @@
 name: LRA
 
 on:
-  push:
-  pull_request:
-    branches: [ main ]
-    paths:
-      - "rts/lra/**"
-      - "rts/pom.xml"
-      - "ArjunaCore/arjuna/**"
-      - "ArjunaCore/pom.xml"
-      - "pom.xml"
-      - "scripts/hudson/narayana.sh"
-      - ".github/workflows/lra-test.yml"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      narayanaRepo:
+        description: 'Repo to clone for Narayana'
+        required: true
+        default: 'jbosstm/narayana'
+        type: 'string'
+      narayanaBranch:
+        description: 'Branch to use from jbosstm/narayana'
+        required: true
+        default: 'main'
+        type: 'string'
 
 jobs:
   lra-test:
@@ -25,6 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          repository: ${{ inputs.narayanaRepo }}
+          ref: ${{ inputs.narayanaBranch }}
 
       - uses: actions/setup-java@v1
         name: Set up JDK ${{ matrix.java-version }}
