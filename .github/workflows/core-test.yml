@@ -4,6 +4,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
+      narayanaRepo:
+        description: 'Repo to clone for Narayana'
+        required: true
+        default: 'jbosstm/narayana'
+        type: 'string'
       narayanaBranch:
         description: 'Branch to use from jbosstm/narayana'
         required: true
@@ -21,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: jbosstm/narayana
+          repository: ${{ inputs.narayanaRepo }}
           ref: ${{ inputs.narayanaBranch }}
 
       - uses: actions/setup-java@v1
