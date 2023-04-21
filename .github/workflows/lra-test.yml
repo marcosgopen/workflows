@@ -7,10 +7,10 @@ on:
       narayanaRepo:
         description: 'Repo to clone for Narayana'
         required: true
-        default: 'jbosstm/narayana'
+        default: 'marcosgopen/narayana'
         type: 'string'
       narayanaBranch:
-        description: 'Branch to use from jbosstm/narayana'
+        description: 'Branch to use from marcosgopen/narayana'
         required: true
         default: 'main'
         type: 'string'
