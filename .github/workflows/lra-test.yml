@@ -10,7 +10,7 @@ on:
         default: 'marcosgopen/narayana'
         type: 'string'
       narayanaBranch:
-        description: 'Branch to use from marcosgopen/narayana'
+        description: 'Branch to use from narayana'
         required: true
         default: 'main'
         type: 'string'
