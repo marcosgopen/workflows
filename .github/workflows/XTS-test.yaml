@@ -51,6 +51,5 @@ jobs:
             **/ObjectStore*/**
             **/tx-object-store/**
             **/*tx-object-store.zip
-            **/target/*surefire-reports*/**
             **/target/*failsafe-reports*/**
           if-no-files-found: error
