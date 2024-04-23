@@ -1,4 +1,4 @@
-name: as-test
+name: as-tests
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -17,7 +17,7 @@ on:
 
 jobs:
   core-test:
-    name: as-test test with JDK ${{ matrix.java-version }}
+    name: as-tests with JDK ${{ matrix.java-version }}
     timeout-minutes: 120
     strategy:
       matrix:
@@ -34,7 +34,7 @@ jobs:
         with:
           java-version: ${{ matrix.java-version }}
 
-      - name: as-test test
+      - name: as-tests
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
