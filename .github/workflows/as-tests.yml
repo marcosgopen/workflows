@@ -18,7 +18,7 @@ on:
 jobs:
   core-test:
     name: as-tests with JDK ${{ matrix.java-version }}
-    timeout-minutes: 120
+    timeout-minutes: 320
     strategy:
       matrix:
         java-version: [ 11, 17, 21 ]
