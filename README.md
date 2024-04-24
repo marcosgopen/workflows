@@ -4,4 +4,3 @@
 [![XTS](https://github.com/marcosgopen/workflows/actions/workflows/XTS-test.yaml/badge.svg)](https://github.com/marcosgopen/workflows/actions/workflows/XTS-test.yaml)
 [![AS_TESTS](https://github.com/marcosgopen/workflows/actions/workflows/as-tests.yml/badge.svg)](https://github.com/marcosgopen/workflows/actions/workflows/as-tests.yml)
 [![RTS](https://github.com/marcosgopen/workflows/actions/workflows/RTS-test.yml/badge.svg)](https://github.com/marcosgopen/workflows/actions/workflows/RTS-test.yml)
-[![QA_JTS_OPENJDKORB](https://github.com/marcosgopen/workflows/actions/workflows/QA-JTS-OPENJDKORB-test.yml/badge.svg)](https://github.com/marcosgopen/workflows/actions/workflows/QA-JTS-OPENJDKORB-test.yml)
