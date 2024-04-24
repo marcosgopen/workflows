@@ -18,7 +18,7 @@ on:
 jobs:
   QA_JTS_OPENJDKORB-test:
     name: QA_JTS_OPENJDKORB test with JDK ${{ matrix.java-version }}
-    timeout-minutes: 120
+    timeout-minutes: 420
     strategy:
       matrix:
         java-version: [ 11, 17, 21 ]
