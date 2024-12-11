@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
     inputs:
       narayanaRepo:
-        description: 'Repo to clone for Narayana'
+        description: 'Repo to clone for Narayana LRA'
         required: true
-        default: 'marcosgopen/narayana'
+        default: 'marcosgopen/lra'
         type: 'string'
       narayanaBranch:
-        description: 'Branch to use from narayana'
+        description: 'Branch to use from Narayana LRA'
         required: true
         default: 'main'
         type: 'string'
