@@ -1,4 +1,4 @@
-name: PERFORMACE
+name: PERFORMANCE
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -16,8 +16,8 @@ on:
         type: 'string'
 
 jobs:
-  PERFORMACE-test:
-    name: PERFORMACE test with JDK ${{ matrix.java-version }}
+  PERFORMANCE-test:
+    name: PERFORMANCE test with JDK ${{ matrix.java-version }}
     timeout-minutes: 120
     strategy:
       matrix:
@@ -34,18 +34,18 @@ jobs:
         with:
           java-version: ${{ matrix.java-version }}
 
-      - name: PERFORMACE test
+      - name: PERFORMANCE test
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
-          WORKSPACE=$PWD PROFILE=PERFORMACE ./scripts/hudson/narayana.sh
+          WORKSPACE=$PWD PROFILE=PERFORMANCE ./scripts/hudson/narayana.sh
         env:
           LRA_TCK_TIMEOUT_FACTOR: 1
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: PERFORMACE-logs-jdk${{ matrix.java-version }}
+          name: PERFORMANCE-logs-jdk${{ matrix.java-version }}
           path: |
             jboss-as/dist/target/wildfly-*/standalone/log/
             **/ObjectStore*/**
